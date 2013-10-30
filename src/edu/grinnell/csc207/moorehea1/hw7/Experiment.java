@@ -3,7 +3,7 @@ package edu.grinnell.csc207.moorehea1.hw7;
 import java.io.PrintWriter;
 
 /**
- * A simple set of experiments to make sure that our amazing LinkedList
+ * A simple set of experiments to make sure that our amazing DoublyLinkedList
  * class works fine.
  */
 public class Experiment {
@@ -18,14 +18,14 @@ public class Experiment {
          } // for
          pen.println();
          pen.flush();
-     } // printList(PrintWriter, LinkedList<Object>)
+     } // printList(PrintWriter, DoublyLinkedList<Object>)
 
      public static void main(String[] args) throws Exception {
          // Set up output
          PrintWriter pen = new PrintWriter(System.out, true);
 
          // Create some lists
-        // DoublyLinkedList<String> strings = new DoublyLinkedList<String>();
+         //DoublyLinkedList<String> strings = new DoublyLinkedList<String>();
          DoublyLinkedList<Integer> numbers = new DoublyLinkedList<Integer>();
 
          // Prepend a few elements
@@ -38,7 +38,8 @@ public class Experiment {
          numbers.append(1);
          numbers.append(2);
          numbers.append(3);
-
+         printList(pen, numbers);
+         
          // And we're done
          pen.close();
      } // main(String[])
