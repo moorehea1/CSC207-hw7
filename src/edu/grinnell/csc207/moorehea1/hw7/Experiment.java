@@ -1,7 +1,6 @@
 package edu.grinnell.csc207.moorehea1.hw7;
 
 import java.io.PrintWriter;
-import java.util.LinkedList;
 
 /**
  * A simple set of experiments to make sure that our amazing LinkedList
@@ -12,7 +11,7 @@ public class Experiment {
      /**
       * Print a list of objects.
       */
-     public static <T> void printList(PrintWriter pen, LinkedList<T> list) {
+     public static <T> void printList(PrintWriter pen, DoublyLinkedList<T> list) {
          for (T val : list) {
              pen.print(val);
              pen.print(" ");
@@ -26,8 +25,8 @@ public class Experiment {
          PrintWriter pen = new PrintWriter(System.out, true);
 
          // Create some lists
-         LinkedList<String> strings = new LinkedList<String>();
-         LinkedList<Integer> numbers = new LinkedList<Integer>();
+        // DoublyLinkedList<String> strings = new DoublyLinkedList<String>();
+         DoublyLinkedList<Integer> numbers = new DoublyLinkedList<Integer>();
 
          // Prepend a few elements
          numbers.prepend(42);
